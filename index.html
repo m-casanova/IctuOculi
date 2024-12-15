@@ -1,0 +1,324 @@
+<html>
+<title>Ictu Oculi - A variable fork from "Simonetta"</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@font-face {
+  font-family: "test"; font-weight: 300 900;
+  src: url("font/IctuOculi.woff2") format("woff2-variations");
+}
+body { font-family: "test"; font-size: 16pt; margin:0; padding:0 }
+div { margin:0; padding:0; }
+
+a { color: #06c }
+
+em, i { font-variation-settings: "ital" 1; font-style:normal }
+
+header { width: 100%; margin:0; padding:0 }
+header > div { width:100%; color: #fff }
+header > div.info { background: #0059b3; height: 48px }
+header > div.titolo { background: #06c; height: 104px }
+header > div > div { width: 1180px; margin: 0px auto; padding:0 }
+header div div p { margin:0; padding: 10px 10px; font-size: 14pt }
+header div div h1 { margin:0; padding: 30px 10px; font-size: 36px; font-weight: 600; color: #fff }
+
+section { width: 1180px; margin:0 auto 40px; padding:0 }
+article { width: 890px; margin: 0 0 0 290; padding:0 }
+article p, article p.capo { margin: 5px 10px; padding:0; color: #1a1a1a; line-height: 1.3em; font-size: 18pt; font-weight: 450 }
+article p.nota { font-size: 14pt; color: #444 }
+
+h2 { margin:30px 10px;padding:0; font-size: 28pt; line-height: 1.4em; font-weight: 500; color: #bf3922 }
+h3 { margin:20px 10px;padding:0; font-size: 18pt; line-height: 1.4em; font-weight: 600; color: #bf3922 }
+h4 { margin:20px 10px;padding:0; font-size: 16pt; line-height: 1.4em; font-weight: 700; color: #bf3922 }
+
+a.bia { color: #fff; text-decoration: none; }
+a.bia:hover { font-weight: 550 }
+a.ref { font-size: 75%; font-weight: 600; padding: 0 2px }
+a.ico { text-decoration: none }
+a.ico span { text-decoration: underline solid from-font }
+.inv0 { padding: 3px 6px; background-color: #eee; color: #000 }
+.inv1 { padding: 3px 6px; background-color: #036; color: #fff }
+.inv1 a { color: #fff }
+
+hr { border:0; border-bottom: 1px solid #666; margin: 20px; padding:0 }
+
+table { margin: 15px auto; padding:0; text-align:center; font-size: 16pt; border-top: 1px solid #666 }
+table th { border-bottom: 1px solid #666 }
+table td { padding: 2px 6px}
+
+blockquote { margin: 10px; padding: 6px 10px 6px 20px; border-left: 3px solid #bf3922; color: #444 }
+
+.f1 { font-weight: 100 }
+.f2 { font-weight: 200 }
+.f3 { font-weight: 300 }
+.f4 { font-weight: 400 }
+.f5 { font-weight: 500 }
+.f6 { font-weight: 600 }
+.f7 { font-weight: 700 }
+.f8 { font-weight: 800 }
+.f9 { font-weight: 900 }
+
+.entra { margin-left: 40px }
+
+.testo { color: #444; width:90%; margin: 20px 10px; border:0; border-bottom: 1px solid #888; font-family: "test"; }
+input.testo { font-size:32pt; color: #444  }
+input:focus { outline: none }
+button { font-size:14pt; color: #fff; margin: 10px 0; padding: 6px 10px; border:none; font-family: "test"; font-weight: 600; background-color: #06c; border-radius: 8px; cursor: pointer; }
+button:hover { background-color: #00274c; }
+
+footer { padding:0; margin:0; width: 100%; background: #2e383d; color: #fff }
+footer > div { padding:20 0; margin:0 auto; width: 1180px }
+footer p { margin: 0 10px; font-size: 18px }
+
+.rosso { color: #bf3922 }
+.feat { font-weight: 600 }
+.legg { font-weight: 200 }
+.codice { color: #666; font-size: 12pt; text-align:left; border-bottom: 1px solid #666 }
+.vsups { font-feature-settings: 'sups'; }
+.vnumr { font-feature-settings: 'numr'; }
+.vdnom { font-feature-settings: 'dnom'; }
+.vsubs { font-feature-settings: 'subs'; }
+.vfrac { font-feature-settings: 'frac'; }
+.vpnum { font-feature-settings: 'pnum'; }
+.vzero { font-feature-settings: 'zero'; }
+.vss01 { font-feature-settings: 'ss01'; }
+.vss02 { font-feature-settings: 'ss02'; }
+.vss03 { font-feature-settings: 'ss03'; }
+
+.vario { text-align: center; font-size: 40px; line-height: 2em; animation: variabile 2000ms infinite both; }
+.vario:hover { animation-play-state: paused; }
+
+p.unicode, p.icone { font-size: 1.6rem; line-height: 2em; margin: 15px 10px }
+p.unicode span, p.icone span { color: #666; background: #eee; border-radius: 10px; padding: 1px; line-height: 1.5em; width: 1.5em; display: inline-block; text-align:center; border: 2px solid #eee  }
+p.unicode span:hover, p.icone span:hover { background: #fcfcfc; color: #000; border: 2px solid #06c }
+
+p.unicode span:hover { cursor: default; animation: variabile 4000ms infinite both; }
+p.icone span:hover { cursor:pointer; animation: variabile2 2000ms infinite both; }
+
+.min { color: #888 }
+
+@keyframes variabile {
+	0%    { font-variation-settings: 'wght' 300, 'ital' 0; }
+	50%   { font-variation-settings: 'wght' 900, 'ital' 0; }
+	100%  { font-variation-settings: 'wght' 300, 'ital' 0; }
+}
+
+div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; border-right:1px solid #555; color: #666 }
+div.side p {font-weight: 500 }
+
+
+#avviso { background-color: #8f8; padding: 5px; display: none }
+
+@media only screen and (max-width: 1200px) {
+ header > div > div { width: 100%; }
+ section { width: 100% }
+ article { width: 100%; margin: 0; }
+ footer > div { width: 100% }
+ div.side {display:none }
+}
+</style>
+<body>
+	<header>
+		<div class="info">
+			<div>
+				<p><a href="https://github.com/m-casanova/IctuOculi" class="bia">← Github</a></p>
+			</div>
+		</div>
+		<div class="titolo">
+			<div>
+				<h1>Ictu Oculi</h1>
+			</div>
+		</div>
+	</header>
+
+	<section>
+		<div class="side">
+			<p>Una breve descrizione del font derivato da <span class="f6">Simonetta</span></p>
+		</div>
+		<article>
+			<h2>Ictu Oculi, un font <span class="f3">v</span><span class="f3">a</span><span class="f4">r</span><span class="f5">i</span><span class="f6">a</span><span class="f7">b</span><span class="f8">i</span><span class="f9">l</span><span class="f9">e</span></h2>
+			<p>Utilizzare la barra di scorrimento per testare il font (come indicato dall'Accademia della Crusca, si utilizza il maschile<a class="ref" id="nt-1" href="#ref-1">[1]</a>).</p>
+			<input type="text" class="testo" value="Inserire un testo di prova ÀÈÉÌÒÙßàèéìòù"/>
+			<p><i>Impostazioni:</i> <span id="dati"></span></p>
+			<p><b>wght (300...900):</b> <input id="range_wght" type="range" value="400" min="300" max="900" step="1" oninput="aggiorna('wght', this.value)"></p>
+			<p><button onclick="reset()">Reimposta</button></p>
+			
+			<h3>Descrizione</h3>
+			
+			<p><span class="f6">Simonetta</span> è un font realizzato da Gayaneh Bagdasaryan per Brownfox e distribuito con licenza OFL 1.1<a class="ref" id="nt-2" href="#ref-2">[2]</a>; il nome è in onore di Simonetta Vespucci<a class="ref" id="nt-3" href="#ref-3">[3]</a>.</p>
+			<p>Il font variabile <span class="f6">Ictu Oculi</span> è una versione variabile del font Simonetta, ma con alcune modifiche. Al momento non si è considerato il corsivo, ma si è estrapolata una versione "Light".</p>
+			<p class="vario">Ictu Oculi Variabile</p>
+			<p>Tabella delle variazioni di "Ictu Oculi" (il font "Simonetta" contiene solo Regular, Italic, Black, BlackItalic).</p>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<th>Weight</th>
+					<th>Tondo</th>
+					<th>Corsivo</th>
+				</tr>
+				<tr class="f3">
+					<td>300</td>
+					<td>Light</td>
+					<td>—</td>
+				</tr>
+				<tr>
+					<td>400</td>
+					<td>Regular</td>
+					<td>—</td>
+				</tr>
+				<tr class="f5">
+					<td>500</td>
+					<td>Medium</td>
+					<td>—</td>
+				</tr>
+				<tr class="f6">
+					<td>600</td>
+					<td>SemiBold</td>
+					<td>—</td>
+				</tr>
+				<tr class="f7">
+					<td>700</td>
+					<td>Bold</td>
+					<td>—</td>
+				</tr>
+				<tr class="f8">
+					<td>800</td>
+					<td>ExtraBold</td>
+					<td>—</td>
+				</tr>
+				<tr class="f9">
+					<td>900</td>
+					<td>Black</td>
+					<td>—</td>
+				</tr>
+			</table>
+			<p>Il font può essere utilizzato tramite un unico file in formato WOFF2 con il seguente codice CSS.</p>
+			<blockquote>@font-face {<br/>
+			&nbsp; &nbsp; font-family: "Ictu Oculi";<br/>
+			&nbsp; &nbsp; font-weight: 300 900;<br/>
+			&nbsp; &nbsp; src: url("IctuOculi.woff2") format("woff2-variations");<br/>
+			}</blockquote>
+			<p>Ovviamente il percorso del file deve essere adattato alla specifica situazione.</p>
+
+			<h3 id="caratteristiche">Caratteristiche</h3>
+			<p>Il font è distribuito nei formati ttf e WOFF2 e sono supportate le seguenti caratteristiche.</p>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="feat">'sups'</td>
+					<td>A1234567890</td>
+					<td class="legg">→</td>
+					<td class="vsups">A1234567890</td>
+				<tr>
+				<tr>
+					<td colspan="5" class="codice">font-feature-settings: 'sups';</td>
+				</tr>
+				<tr>
+					<td class="feat">'subs'</td>
+					<td>A1234567890</td>
+					<td class="legg">→</td>
+					<td class="vsubs">A1234567890</td>
+				<tr>
+				<tr>
+					<td colspan="5" class="codice">font-feature-settings: 'subs';</td>
+				</tr>
+				<tr>
+					<td class="feat">'numr'</td>
+					<td>1/ 2/ 3/ 4/ 5/ …</td>
+					<td class="legg">→</td>
+					<td class="vnumr">1/ 2/ 3/ 4/ 5/ …</td>
+				<tr>
+				<tr>
+					<td colspan="5" class="codice">font-feature-settings: 'numr';</td>
+				</tr>
+				<tr>
+					<td class="feat">'dnom'</td>
+					<td>/1 /2 /3 /4 /5 …</td>
+					<td class="legg">→</td>
+					<td class="vdnom">/1 /2 /3 /4 /5 …</td>
+				<tr>
+				<tr>
+					<td colspan="5" class="codice">font-feature-settings: 'dnom';</td>
+				</tr>
+				<tr>
+					<td class="feat">'frac'</td>
+					<td>A12345/67890</td>
+					<td class="legg">→</td>
+					<td class="vfrac">A12345/67890</td>
+				<tr>
+				<tr>
+					<td colspan="5" class="codice">font-feature-settings: 'frac';</td>
+				</tr>
+			</table>
+
+			<h3 id="caratteri">Caratteri</h3>
+			<p>Light</p>
+			<p class="entra f3">! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § © ª « ¬ ® ° ± ² ³ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ń ń Ņ ņ Ň ň Ō ō Ŏ ŏ Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ũ ũ Ū ū Ŭ ŭ Ů ů Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ȷ μ Ẁ ẁ Ẃ ẃ Ẅ ẅ – — ‘ ’ ‚ “ ” „ • … ‰ ‹ › ⁄ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ € − ∙ ﬀ ﬁ ﬂ ﬃ ﬄ Ș ș Ț ț</p>
+			<p>Regular</p>
+			<p class="entra f4">! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § © ª « ¬ ® ° ± ² ³ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ń ń Ņ ņ Ň ň Ō ō Ŏ ŏ Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ũ ũ Ū ū Ŭ ŭ Ů ů Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ȷ μ Ẁ ẁ Ẃ ẃ Ẅ ẅ – — ‘ ’ ‚ “ ” „ • … ‰ ‹ › ⁄ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ € − ∙ ﬀ ﬁ ﬂ ﬃ ﬄ Ș ș Ț ț</p>
+			<p>Medium</p>
+			<p class="entra f5">! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § © ª « ¬ ® ° ± ² ³ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ń ń Ņ ņ Ň ň Ō ō Ŏ ŏ Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ũ ũ Ū ū Ŭ ŭ Ů ů Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ȷ μ Ẁ ẁ Ẃ ẃ Ẅ ẅ – — ‘ ’ ‚ “ ” „ • … ‰ ‹ › ⁄ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ € − ∙ ﬀ ﬁ ﬂ ﬃ ﬄ Ș ș Ț ț</p>
+			<p>SemiBold</p>
+			<p class="entra f6">! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § © ª « ¬ ® ° ± ² ³ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ń ń Ņ ņ Ň ň Ō ō Ŏ ŏ Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ũ ũ Ū ū Ŭ ŭ Ů ů Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ȷ μ Ẁ ẁ Ẃ ẃ Ẅ ẅ – — ‘ ’ ‚ “ ” „ • … ‰ ‹ › ⁄ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ € − ∙ ﬀ ﬁ ﬂ ﬃ ﬄ Ș ș Ț ț</p>
+			<p>Bold</p>
+			<p class="entra f7">! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § © ª « ¬ ® ° ± ² ³ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ń ń Ņ ņ Ň ň Ō ō Ŏ ŏ Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ũ ũ Ū ū Ŭ ŭ Ů ů Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ȷ μ Ẁ ẁ Ẃ ẃ Ẅ ẅ – — ‘ ’ ‚ “ ” „ • … ‰ ‹ › ⁄ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ € − ∙ ﬀ ﬁ ﬂ ﬃ ﬄ Ș ș Ț ț</p>
+			<p>ExtraBold</p>
+			<p class="entra f8">! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § © ª « ¬ ® ° ± ² ³ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ń ń Ņ ņ Ň ň Ō ō Ŏ ŏ Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ũ ũ Ū ū Ŭ ŭ Ů ů Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ȷ μ Ẁ ẁ Ẃ ẃ Ẅ ẅ – — ‘ ’ ‚ “ ” „ • … ‰ ‹ › ⁄ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ € − ∙ ﬀ ﬁ ﬂ ﬃ ﬄ Ș ș Ț ț</p>
+			<p>Black</p>
+			<p class="entra f9">! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~ ¡ ¢ £ ¤ ¥ ¦ § © ª « ¬ ® ° ± ² ³ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ Ā ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě Ĝ ĝ Ğ ğ Ġ ġ Ģ ģ Ĥ ĥ Ĩ ĩ Ī ī Ĭ ĭ Į į İ ı Ĳ ĳ Ĵ ĵ Ķ ķ Ĺ ĺ Ļ ļ Ń ń Ņ ņ Ň ň Ō ō Ŏ ŏ Œ œ Ŕ ŕ Ŗ ŗ Ř ř Ś ś Ŝ ŝ Ş ş Š š Ţ ţ Ť ť Ũ ũ Ū ū Ŭ ŭ Ů ů Ų ų Ŵ ŵ Ŷ ŷ Ÿ Ź ź Ż ż Ž ž ȷ μ Ẁ ẁ Ẃ ẃ Ẅ ẅ – — ‘ ’ ‚ “ ” „ • … ‰ ‹ › ⁄ ⁰ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ € − ∙ ﬀ ﬁ ﬂ ﬃ ﬄ Ș ș Ț ț</p>
+
+			<h4>Note</h4>
+			<p class="nota" id="ref-1"><a href="#nt-1">1]</a> <a href="https://accademiadellacrusca.it/it/consulenza/sul-genere-di-font/984" target="_blank">Sul genere di font</a>, Accademia della Crusca.</p>
+			<p class="nota" id="ref-2"><a href="#nt-2">2]</a> <a href="https://github.com/google/fonts/tree/main/ofl/simonetta" target="_blank">Simonetta</a>, Github.</p>
+			<p class="nota" id="ref-3"><a href="#nt-3">3]</a> <a href="https://it.wikipedia.org/wiki/Simonetta_Vespucci" target="_blank">Simonetta Vespucci</a>, Wikipedia.</p>
+		</article>
+	</section>
+	<footer>
+		<div>
+			<p>&copy; 2024 Michele Casanova
+		</div>
+	</footer>
+
+<script>
+	var axis = { "wght": 400, "ital": 0 }
+
+	function aggiorna2() {
+		let testi = document.querySelectorAll(".testo");
+		if (!testi) {
+			console.error("Elemento .testo non presente");
+			return;
+		}
+
+		let first = true;
+		let settings = "";
+		
+		for (let ax in axis) {
+			if (!first) {
+				settings += ", "
+			}
+			settings += "'" + ax + "' " + axis[ax];
+			first = false;
+		}
+		
+		for (let tt of testi) {
+			tt.style.fontVariationSettings = settings;
+		}
+
+		document.querySelector("#dati").innerHTML = settings;
+		
+	}
+	
+	function aggiorna(a, b) {
+		axis[a] = b;
+		aggiorna2();
+	}
+							
+	function reset() {
+		let range = null;
+
+		axis["wght"] = 400;
+		document.querySelector("#range_wght").value = 400;
+
+		aggiorna2();
+	}
+	reset();
+</script>
+<body>
+</html>
