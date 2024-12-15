@@ -1,4 +1,5 @@
 # Ictu Oculi
+- Versione 1.101: fix caratteri light
 - Versione 1.0: versione iniziale
 
 Per testare il font, vedere la [pagina interattiva](https://m-casanova.github.io/IctuOculi/).
