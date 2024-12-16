@@ -1,4 +1,5 @@
 # Ictu Oculi
+- Versione 1.119: aggiunta legature st ct e alcuni caratteri
 - Versione 1.101: fix caratteri light
 - Versione 1.0: versione iniziale
 
