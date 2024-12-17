@@ -14,6 +14,14 @@ Il font **Ictu Oculi** è derivato da _[Simonetta](https://github.com/google/fon
 
 **Ictu Oculi** è una versione variabile, ma con alcune modifiche. Al momento non si è considerato il corsivo, ma si è estrapolata una versione "Light".
 
+Dalla versione 1.128 è stata modificata la lettera Q (la versione originale è disponibile come __ss01__)
+
+![image](images/IctuOculi4.jpg)
+
+Caratteristiche Opentype
+
 ![image](images/IctuOculi2.jpg)
+
+Esempio con capolettera [Capo Lombardo](https://github.com/m-casanova/CapoLombardo)
 
 ![image](images/IctuOculi3.jpg)
