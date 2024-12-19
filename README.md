@@ -1,4 +1,5 @@
 # Ictu Oculi
+- Versione 1.142: aggiunta caratteri (e.g. ⁋ ẞ)
 - Versione 1.142: aggiunta frecce
 - Versione 1.139: sistemazioni minori
 - Versione 1.136: aggiunta __tnum__
