@@ -1,4 +1,5 @@
 # Ictu Oculi
+- Versione 1.155: fix frazioni
 - Versione 1.147: revisione di alcuni caratteri
 - Versione 1.145: aggiunta caratteri (e.g. ⁋ ẞ)
 - Versione 1.142: aggiunta frecce
